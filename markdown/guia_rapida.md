@@ -13,7 +13,7 @@ Todas las aplicaciones de Markdown admiten estos elementos.
 | Lista no ordenada | - Primer elemento <br /> - Segundo elemento <br /> - Tercer elemento |
 | Código | \`código\`
 | Línea horizontal | \-\-\- |
-| Enlace | \[Título]\(https[]()://www.ejemplo.com) |
+| Enlace | \[Título]\(`https://www.ejemplo.com`) |
 | Imagen | \!\[Texto alternativo]\(imagen.png)
 
 
@@ -24,13 +24,13 @@ No todas las aplicaciones de Markdown admiten estos elementos.
 | ----------- | ----------- |
 | Tabla | \| Encabezado 1 \| Encabezado 2 \| <br /> \| \-\-\-\-\-\-\-\-\-\-\- \| \-\-\-\-\-\-\-\-\-\-\- \| <br /> \| Elemento 1 \| Elemento 2 \| |
 | Bloque de código cercado | \``` <br /> { <br /> &nbsp;&nbsp; "primerNombre": "Juan", <br /> &nbsp;&nbsp; "primerApellido": "Pérez", <br />  &nbsp;&nbsp; "edad": 25 <br /> } <br /> \```|
-| Nota al pie de página | Aquí hay una nota al pie de página. [\^1] <br /> <br /> [\^1]: Esta es una nota al pie de la página. |
+| Nota al pie de página | Aquí hay una nota al pie de página. [^1] <br /> <br /> [^1]: Esta es una nota al pie de la página. |
 | Encabezado con ID | \#\#\# Un Gran Encabezado {\#id-personalizado} |
 | Lista de definición | Término <br /> : Definición |
-| Tachado | \~~El mundo es plano.\~~ |
+| Tachado | \~\~El mundo es plano.\~\~ |
 | Lista de tareas | - [x] Escribir el documento <br /> - [ ] Hacer el commit <br /> - [ ] Actualizar el repositorio |
 | Emoji | ¡Esto es tan divertido! :emoji: |
-| Subrayar | Necesito subrayar \==estas palabras tan importantes.\== |
+| Subrayar | Necesito subrayar \==estas importantes palabras.\== |
 | Subíndice | H\~2\~O |
 | Superíndice | X\^2\^  |
 
