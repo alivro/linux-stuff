@@ -1,0 +1,9 @@
+Host <Nombre del host>
+	Hostname <Dirección del host>
+	User <Nombre de usuario>
+	Port <Puerto>
+Host *	
+	HostKeyAlgorithms +ssh-rsa,ssh-dss
+	PubkeyAcceptedKeyTypes +ssh-rsa
+	ServerAliveInterval 180
+
