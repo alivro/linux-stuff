@@ -1,0 +1,65 @@
+" Búsqueda
+set hlsearch			" Habilita el resaltado de las búsquedas
+set incsearch			" Habilita la búsqueda incremental (resalta coincidencias parciales)
+set ignorecase			" Ignora mayúsculas y minúsculas al buscar
+set smartcase			" Sobreescribe la opción 'ignorecase' si la búsqueda contiene mayúsculas
+
+" Colores
+set background=dark		" Establece el color de fondo
+"colorscheme PaperColor		" Establece el esquema de color
+
+" Cursor
+set cursorline			" Resalta la línea del cursor horizontalmente
+"set cursorcolumn		" Resalta la línea del cursor verticalmente
+
+" Líneas
+set wrap				" Si la línea es más larga que el ancho de la pantalla, inserta un salto de línea
+set linebreak			" Evita los saltos de línea en medio de una palabra
+
+" Numeración
+set number				" Numera las líneas de forma absoluta
+"set relativenumber		" Numera las líneas de forma relativa
+
+" Sintaxis
+syntax enable			" Habilita el resaltado de sintaxis (mantiene configuración de color)
+"syntax on				" Habilita el resaltado de sintaxis (sobreescribe configuración de color)
+
+" Tabulación/Identanción
+set tabstop=4			" Establece el ancho (columnas) de la tabulación
+"set expandtab			" Inserta espacios en lugar de caracteres de tabulación
+set shiftwidth=4		" Establece el ancho (columnas) de la identación ('autoindent', 'cindent', '>>', '<<')
+set softtabstop=4		" Establece el número de espacios que representa una tabulación o retroceso
+set autoindent			" Copia la identación de la línea actual al comenzar una nueva línea
+
+" Historial
+set undofile				" Almacena el historial de cambios en un archivo 'undo'
+set undodir=~/.vim/undo		" Directorio donde se almacenarán los archivos 'undo'
+set undolevels=1000			" Establece el número máximo de cambios que se pueden deshacer
+set undoreload=10000		" Establece el número máximo de líneas a guardar al recargar el buffer
+
+" Vim
+"set autoread			" Si el archivo fue modificado fuera de Vim, recarga el archivo
+set encoding=utf-8		" Establece la codificación de caracteres
+set laststatus=2		" Muestra la línea de estado
+set mouse=a				" Habilita el uso del mouse (a = all modes)
+set noswapfile			" Deshabilita la creación de archivos swap
+set ruler				" Muestra el número de linea y columna del cursor
+set showcmd				" Muestra (parcialmente) los comandos en la útima línea de la pantalla 
+set showmatch 			" Resalta paréntesis coincidentes: [{()}]
+set wildmenu			" Habilita el menú para el autocompletado de comandos
+
+" Resalta espacios en blanco al final de las líneas
+set list listchars=trail:·,tab:\ \ 
+" Regresa a la última posición de edición al abrir un archivo
+au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+" Atajos
+nnoremap <C-a> 0							" Salta al inicio de la línea (normal mode noremap)
+nnoremap <C-e> $							" Salta al final de la línea
+nnoremap <C-x> :set number!<CR>				" Habilita/deshabilita la opción 'number'
+nnoremap <C-w> :set relativenumber!<CR>		" Habilita/deshabilita la opción 'relativenumber'
+nnoremap <C-g> :set nohlsearch!<CR>			" Habilita/deshabilita el resaltado de la opción 'hlsearch'
+
+" Comandos
+"command Sn :set number!
+"command Srn :set relativenumber!
