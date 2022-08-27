@@ -1,0 +1,53 @@
+[#tar]
+= Tar
+
+[#archivar]
+== Archivar
+
+[#archivar_archivos]
+=== Archivos
+
+----
+tar -cvf <nombre del archivo>.tar <nombre de archivo 1>, <nombre de archivo 2>, <nombre de archivo 3>, ...
+----
+
+[#archivar_directorios]
+=== Directorios
+
+----
+tar -czvf <nombre del archivo>.tar <nombre del directorio>
+----
+
+
+[#comprimir]
+== Comprimir
+
+[#comprimir_archivos]
+=== Archivos
+
+----
+tar -czvf <nombre del archivo>.tar.gz <nombre de archivo 1>, <nombre de archivo 2>, <nombre de archivo 3>, ...
+----
+
+[#comprimir_directorios]
+=== Directorios
+
+----
+tar -cvf <nombre del archivo>.tar.gz <nombre del directorio>
+----
+
+
+[#tar_listar_contenido]
+== Listar contenido
+
+----
+tar -tvf <nombre del archivo>.tar
+----
+
+
+[#tar_extraer_contenido]
+== Extrar contenido
+
+----
+tar -xvf <nombre del archivo>.tar
+----
