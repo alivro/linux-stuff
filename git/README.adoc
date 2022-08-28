@@ -1,0 +1,281 @@
+
+= Git
+
+[#comandos]
+== Comandos
+
+[#git_config]
+=== git config
+
+----
+git config --list
+----
+
+----
+git config --global --edit
+----
+
+----
+git config --global user.name "<nombre de usuario>"
+----
+
+----
+git config --global user.email "<dirección de correo>"
+----
+
+----
+git config --global core.editor <nombre del editor>
+----
+
+----
+git config --global color.ui auto
+----
+
+
+[#git_init]
+=== git init
+
+----
+git init [nombre del repositorio]
+----
+
+
+[#git_remote]
+=== git remote
+
+----
+git remote add origin <URL del repositorio>
+----
+
+
+[#git_clone]
+=== git clone
+
+----
+git clone <URL del repositorio>
+----
+
+
+[#git_branch]
+=== git branch
+
+----
+git branch
+----
+
+----
+git branch <nombre de la rama>
+----
+
+----
+git branch -d <nombre de la rama>
+----
+
+
+[#git_checkout]
+=== git checkout
+
+----
+git checkout <nombre de la rama>
+----
+
+----
+git checkout -b <nombre de la rama>
+----
+
+
+[#git_add]
+=== git add
+
+----
+git add <nombre del archivo>
+----
+
+----
+git add .
+----
+
+----
+git add -A
+----
+
+
+[#git_status]
+=== git status
+
+----
+git status
+----
+
+
+[#git_diff]
+=== git diff
+
+----
+git diff 
+----
+
+----
+git diff --staged
+----
+
+----
+git diff [rama a] [rama b]
+----
+
+
+[#git_reset]
+=== git reset
+
+----
+git reset <nombre del archivo>
+----
+
+----
+git reset <ID del commit>
+----
+
+----
+git reset --hard <ID del commit>
+----
+
+
+[#git_commit]
+=== git commit
+
+----
+git commit
+----
+
+----
+git commit -m "<mensaje del commit>"
+----
+
+
+[#git_push]
+=== git push
+
+----
+git push origin <nombre de la rama>
+----
+
+----
+git push --all origin
+----
+
+----
+git push origin --delete <nombre de la rama>
+----
+
+
+[#git_stash]
+=== git stash
+
+----
+git stash
+----
+
+----
+git stash list
+----
+
+----
+git stash pop
+----
+
+----
+git stash drop
+----
+
+
+[#git_merge]
+=== git merge
+
+----
+git merge <nombre de la rama>
+----
+
+
+[#git_log]
+=== git log
+
+----
+git log
+----
+
+----
+git log --follow <nombre del archivo>
+----
+
+----
+git log --oneline
+----
+
+----
+git log --all
+----
+
+
+[#git_show]
+=== git show
+
+----
+git show <ID del commit>
+----
+
+
+[#git_fetch]
+=== git fetch
+
+----
+git fetch
+----
+
+
+[#git_pull]
+=== git pull
+
+----
+git pull
+----
+
+
+[#ejemplos]
+== Ejemplos
+
+[#cambiar_commit]
+=== Cambiar el último commit
+
+----
+git commit --amend
+git push origin --force <nombre de la rama>
+----
+
+
+[#eliminar_commit]
+=== Eliminar el último commit
+
+----
+git reset --hard HEAD^
+git push origin -f
+----
+
+
+[#cambiar_url]
+=== Cambiar URL del repositorio
+
+----
+git remote set-url origin https://git-repo/new-repository.git
+git remote -v
+----
+
+
+[#referencias]
+== Referencias
+
+* https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Configurando-Git-por-primera-vez[Configurando Git por primera vez]
+* https://github.com/git-guides/git-add[Git Add]
+* https://levelup.gitconnected.com/how-to-rewrite-the-latest-commit-with-git-amend-48a8d5f27758[How to rewrite the latest commit with git amend]
+* https://devconnected.com/how-to-change-git-remote-origin/[How To Change Git Remote Origin]
+* https://education.github.com/git-cheat-sheet-education.pdf[GIT CHEAT SHEET]
+* https://about.gitlab.com/images/press/git-cheat-sheet.pdf[Git Cheat Sheet]
